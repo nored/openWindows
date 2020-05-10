@@ -1,0 +1,46 @@
+.accordion {
+  max-height: unset;
+}
+.accordion,
+.accordion-li {
+  display: block;
+  min-height: 85vh;
+  overflow: hidden;
+}
+
+.accordion-li:hover {
+  background: unset;
+}
+
+.accordion-li .section-content {
+  display: block;
+  opacity: 1;
+}
+
+.section-title {
+  opacity: 0;
+  max-height: 0px;
+}
+
+.section-title h2 {
+  width: 100%;
+}
+#bg-video-t {
+  top: 206vh;
+}
+#bg-video-w {
+  top: 306vh;
+}
+#bg-video-i {
+  top: 108vh;
+}
+.w-80 {
+  width: 60% !important;
+}
+.accordion-li #fb-content h3 {
+  width: 100%;
+  min-height: 6em;
+  padding: 0em;
+  padding-top: 2.5em !important;
+  font-size: 1.5em;
+}

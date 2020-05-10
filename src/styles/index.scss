@@ -1,3 +1,8 @@
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .th-red {
   background-color: #cc0a2f;
 }
@@ -33,6 +38,18 @@
   padding-right: 0.25rem;
 }
 
+#lg-link {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#sm-link {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .top-100 {
   top: 100%;
 }
@@ -60,9 +77,25 @@ a {
   }
   .overflow-x-hidden {
     overflow-x: hidden !important;
+  }
+  .pad-07 {
     padding: 0.7em;
   }
 }
+
+@media screen and (min-width: 78em) {
+  .db-xl {
+    display: block !important;
+  }
+  .dn-xl {
+    display: none !important;
+  }
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll !important;
+}
+
 .max-30 {
   max-height: 30px;
 }
@@ -79,14 +112,53 @@ a {
   width: initial;
 }
 
-.vjs-tech {
+#bg-video-i,
+#bg-video-t,
+#bg-video-w {
+  position: absolute;
+  top: 100vh;
+  bottom: 0;
+  width: 100%;
+  height: 115%;
+  overflow: hidden;
+  z-index: -5;
+}
+
+#bg-video_html5_api,
+#bg-video_shaka_api,
+#bg-video_flash_api {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
+  min-width: 100vw;
   min-height: 100%;
   transform: translateX(calc((100% - 100vw) / 2));
 }
+
+#bg-video-w_html5_api,
+#bg-video-w_shaka_api,
+#bg-video-w_flash_api,
+#bg-video-t_html5_api,
+#bg-video-t_shaka_api,
+#bg-video-t_flash_api,
+#bg-video-i_html5_api,
+#bg-video-i_shaka_api,
+#bg-video-i_flash_api {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #teaser {
   overflow: hidden;
 }
@@ -97,11 +169,177 @@ a {
   min-height: 100vh;
 }
 
+.mvh-85 {
+  min-height: 85vh;
+}
+
 .max-vh-80 {
-  max-height: 75vh;
+  max-height: 67vh;
 }
 
 .tr-link {
   cursor: pointer;
   cursor: hand;
 }
+.fl-end {
+  float: inline-end;
+}
+.vjs-text-track-display,
+.vjs-loading-spinner,
+.vjs-control-bar,
+.vjs-modal-dialog,
+.vjs-big-play-button,
+.vjs-resize-manager {
+  display: none !important;
+}
+
+z-999 {
+  z-index: 999;
+}
+
+.w-20 {
+  width: 20%;
+}
+.w-80 {
+  width: 100% !important;
+}
+
+.vh-74 {
+  max-height: 72vh;
+}
+.p-left-15 {
+  padding-left: 15px;
+}
+.opac-0 {
+  opacity: 0;
+}
+/*Accordion -----------------------------------------------------*/
+#fachbereiche {
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow: hidden;
+  /*   border: 1px solid black; */
+}
+
+.accordion {
+  display: flex;
+  min-height: 85vh;
+  max-height: 85vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.accordion-li {
+  flex: 1;
+  align-items: stretch;
+  overflow: hidden;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: darken(rgba(0, 0, 0, 0.3), 3);
+  }
+
+  &.active {
+    flex: 5;
+    cursor: default;
+    overflow: hidden;
+
+    .section-title {
+      opacity: 0;
+      max-height: 0px;
+    }
+
+    .section-content {
+      flex: 4;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  .section-title {
+    flex: 1;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+
+    h2 {
+      margin: 0;
+      width: 100%;
+      padding: 25px;
+      position: relative;
+      top: 5em;
+      min-height: 7em;
+    }
+    h3 {
+      position: relative;
+      top: 50vh;
+      padding: 1em;
+      width: 80%;
+      left: 3vw;
+    }
+  }
+  #fb-content h3 {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .section-content {
+    flex: 1;
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .accordion {
+    max-height: unset;
+  }
+  .accordion,
+  .accordion-li {
+    display: block;
+    min-height: 85vh;
+    max-width: 100vh;
+    overflow: hidden;
+  }
+
+  .accordion-li {
+    &:hover {
+      background: unset;
+    }
+  }
+
+  .accordion-li .section-content {
+    display: block;
+    opacity: 1;
+  }
+
+  .section-title {
+    opacity: 0;
+    max-height: 0px;
+  }
+
+  .section-title h2 {
+    width: 100%;
+  }
+  #bg-video-t {
+    top: 205vh;
+  }
+  #bg-video-w {
+    top: 300vh;
+  }
+  #bg-video-i {
+    top: 106vh;
+  }
+}
+
+/*Accordion -----------------------------------------------------*/

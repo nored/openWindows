@@ -36,7 +36,7 @@
       </p>
     <![endif]-->
     <main class="helvetica">
-      <header class="pv1 ph2 fixed vw-100 th-red white">
+      <header class="pv1 ph2 fixed vw-100 th-red white z-999">
         <div id="container" class="flex justify-between items-center max-30">
           <div id="logo" class="overflow-hidden dib w2 h2 pa1 grow-large">
             <img
@@ -48,61 +48,165 @@
           <a
             href="#0"
             id="mobile-menu-toggle"
-            class="link custom- color-inherit pa2 dib dn-l"
+            class="link custom- color-inherit pa2 dib dn-xl"
           >
-            <span class="ba menu br2">☰</span>
+            <span class="ba menu br2"><i class="fas fa-bars"></i> </span>
           </a>
 
-          <nav id="main-nav" class="dn db-l">
+          <nav id="main-nav" class="dn db-xl">
             <a
-              href=""
-              class="link f4 no-underline underline-hover db dib-l pa2 pv2 color-inherit"
+              href="#teaser"
+              class="link f4 underline-hover ph2 color-inherit underline"
+              id="lg-link"
+            >
+              Start
+            </a>
+            <a
+              href="#fachbereiche"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
             >
               Fachbereiche
             </a>
             <a
               href="#studienberatung"
-              class="link f4 no-underline underline-hover db dib-l pa2 pv2 color-inherit"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
             >
               Studienberatung
             </a>
             <a
-              href=""
-              class="link f4 no-underline underline-hover dib pa2 pv2 color-inherit"
+              href="#karriere"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
             >
-              Gründung und Transfer
+              Karriere
+            </a>
+            <a
+              href="#international"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              International
+            </a>
+            <a
+              href="#dual"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              Dual
+            </a>
+            <a
+              href="#gruenden"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              Gründen
+            </a>
+            <a
+              href="#anrechnung"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              Anrechnung
+            </a>
+            <a
+              href="#studentenwerk"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              Studentenwerk
+            </a>
+            <a
+              href="#berufsberatung"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="lg-link"
+            >
+              Berufsberatung
             </a>
           </nav>
 
           <nav
             id="main-nav-mobile"
-            class="dn absolute top-100 tc right-0 w-100 pa2 th-red-30 bt"
+            class="dn absolute top-100 tc right-0 w-100 pa2 th-red bt"
           >
             <a
-              href=""
-              class="link f4 no-underline underline-hover db ph2 pv3 color-inherit"
+              href="#teaser"
+              class="link f4 underline-hover ph2 color-inherit underline"
+              id="sm-link"
             >
-              Features
+              Start
             </a>
             <a
-              href=""
-              class="link f4 no-underline underline-hover db ph2 pv3 color-inherit"
+              href="#fachbereiche"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
             >
-              Pricing
+              Fachbereiche
             </a>
             <a
-              href=""
-              class="link f4 no-underline underline-hover db ph2 pv3 color-inherit"
+              href="#studienberatung"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
             >
-              Sign up
+              Studienberatung
+            </a>
+            <a
+              href="#karriere"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Karriere
+            </a>
+            <a
+              href="#international"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              International
+            </a>
+            <a
+              href="#dual"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Dual
+            </a>
+            <a
+              href="#gruenden"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Gründen
+            </a>
+            <a
+              href="#anrechnung"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Anrechnung
+            </a>
+            <a
+              href="#studentenwerk"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Studentenwerk
+            </a>
+            <a
+              href="#berufsberatung"
+              class="link f4 underline-hover ph2 color-inherit"
+              id="sm-link"
+            >
+              Berufsberatung
             </a>
           </nav>
         </div>
       </header>
-      <arcticle class="vh-100 dt vw-100" id="teaser">
+      <article class="vh-100 dt w-100 section" id="teaser">
         <video
-          data-setup="{}"
           id="bg-video"
+          class="video-teaser"
           poster="public/images/video-bg.jpg"
           preload
           autoplay
@@ -131,7 +235,830 @@
             15. Mai 2020 - save the date
           </h4>
         </div>
-      </arcticle>
+      </article>
+      <article class="mvh-85 white section" id="fachbereiche">
+        <ul class="accordion">
+          <li class="accordion-li">
+            <video
+              id="bg-video-i"
+              poster="public/images/video-bg.jpg"
+              preload
+              autoplay
+              muted
+              loop
+              playsinline
+              class="fullscreen-bg__video"
+            ></video>
+            <div class="section-title">
+              <h2 class="th-blue">
+                Willkommen im Fachbereich Informatik und Medien
+              </h2>
+              <h3 class="bg-white black-60 tc lh-title">
+                Klicke um dir das Programm des Fachbereiches anzeigen zu lassen
+              </h3>
+            </div>
+            <div class="section-content">
+              <div
+                class="overflow-auto overflow-x-hidden pad-07 fb-vh"
+                id="fb-content"
+              >
+                <h3 class="th-blue tc lh-title">
+                  Im Fachbereich Informatik und Medien erwartet dich heute
+                  folgendes Programm:
+                </h3>
+                <div
+                  class="overflow-y-scroll w-80 vh-74 center fb-inner-vh"
+                  id="fb-content-inner"
+                >
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-li">
+            <video
+              id="bg-video-t"
+              poster="public/images/video-bg.jpg"
+              preload
+              autoplay
+              muted
+              loop
+              playsinline
+              class="fullscreen-bg__video"
+            ></video>
+            <div class="section-title">
+              <h2 class="th-green">
+                Willkommen im Fachbereich Technik
+              </h2>
+              <h3 class="bg-white black-60 tc lh-title">
+                Klicke um dir das Programm des Fachbereiches anzeigen zu lassen
+              </h3>
+            </div>
+            <div class="section-content">
+              <div
+                class="overflow-auto overflow-x-hidden pad-07 fb-vh"
+                id="fb-content"
+              >
+                <h3 class="th-green tc lh-title">
+                  Im Fachbereich Technik erwartet dich heute folgendes Programm:
+                </h3>
+
+                <div
+                  class="overflow-y-scroll w-80 vh-74 center fb-inner-vh"
+                  id="fb-content-inner"
+                >
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-li">
+            <video
+              id="bg-video-w"
+              poster="public/images/video-bg.jpg"
+              preload
+              autoplay
+              muted
+              loop
+              playsinline
+              class="fullscreen-bg__video"
+            ></video>
+            <div class="section-title">
+              <h2 class="th-orange">
+                Willkommen im Fachbereich Wirtschaft
+              </h2>
+              <h3 class="bg-white black-60 tc lh-title">
+                Klicke um dir das Programm des Fachbereiches anzeigen zu lassen
+              </h3>
+            </div>
+            <div class="section-content">
+              <div
+                class="overflow-auto overflow-x-hidden pad-07 fb-vh"
+                id="fb-content"
+              >
+                <h3 class="th-orange tc lh-title">
+                  Im Fachbereich Wirtschaft erwartet dich heute folgendes
+                  Programm:
+                </h3>
+
+                <div
+                  class="overflow-y-scroll w-80 vh-74 center fb-inner-vh"
+                  id="fb-content-inner"
+                >
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                  <article
+                    class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+                  >
+                    <h1
+                      class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"
+                    >
+                      Malen nach Zahlen
+                    </h1>
+                    <div class="w-100 pa3 bt dt b--black-10">
+                      <div class="dtc-l br">
+                        <p class="f6 f5-ns lh-copy measure">
+                          10:00 - 12:00 Uhr
+                        </p>
+                      </div>
+                      <div class="w-two-thirds dtc p-left-15">
+                        <p class="f6 f5-ns lh-copy measure">
+                          Lorem ipsum dolor sit amet, consetetur sadipscing
+                          elitr, sed diam nonumy eirmod tempor invidunt ut
+                          labore et dolore magna aliquyam erat, sed diam
+                          voluptua. At vero eos et accusam et justo duo dolores
+                          et ea rebum.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+                    >
+                      Teilnehmen
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 bg-white section"
+        id="studienberatung"
+      >
+        <header class="fn fl-ns w-50-ns pr4-ns">
+          <h1 class="mb0 mt5 lh-title">Allgemeine Studienberatung</h1>
+          <time class="f6 ttu tracked gray"
+            >Buche hier dein ganz persönliches Beratungsgespräch</time
+          >
+          <div
+            class="overflow-auto overflow-x-hidden pad-07 shadow-3-ns br2 mt4 max-vh-80"
+          >
+            <table class="f6 w-100 mw8 center" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="fw6 bb b--black-80 tl pb3 pr3 bg-white">
+                    Uhrzeit
+                  </th>
+                  <th class="fw6 bb b--black-80 tl pb3 pr3 bg-white">Art</th>
+                </tr>
+              </thead>
+              <tbody class="lh-copy">
+                <tr>
+                  <td class="pv3 pr3 bb b--black-60">10 UHR</td>
+                  <td class="pv3 pr3 bb b--black-60"></td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">10:00 - 10:15</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">10:20 - 10:35</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">10:40 - 10:55</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-60">11 UHR</td>
+                  <td class="pv3 pr3 bb b--black-60"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3"></td>
+                  <td class="pv3 pr3"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3">11:00 - 12:00</td>
+                  <td class="pv3 pr3">
+                    Live-Chat zu allen Fragen rund ums Studium
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-20"></td>
+                  <td class="pv3 pr3 bb b--black-20"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-60">12 UHR</td>
+                  <td class="pv3 pr3 bb b--black-60"></td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">12:00 - 12:15</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">12:20 - 12:35</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">12:40 - 12:55</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-60">13 UHR</td>
+                  <td class="pv3 pr3 bb b--black-60"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3"></td>
+                  <td class="pv3 pr3"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3">13:00 - 14:00</td>
+                  <td class="pv3 pr3">
+                    Live-Chat zu allen Fragen rund ums Studium
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-20"></td>
+                  <td class="pv3 pr3 bb b--black-20"></td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3 bb b--black-60">14 UHR</td>
+                  <td class="pv3 pr3 bb b--black-60"></td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">14:00 - 14:15</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">14:20 - 14:35</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr class="bg-animate bg-white hover-bg-light-gray tr-link">
+                  <td class="pv3 pr3 bb b--black-20">14:40 - 14:55</td>
+                  <td class="pv3 pr3 bb b--black-20">Persönliche Beratung</td>
+                </tr>
+                <tr>
+                  <td class="pv3 pr3">15 UHR</td>
+                  <td class="pv3 pr3"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </header>
+        <div class="fn fl-ns w-25-ns">
+          <p class="lh-copy measure mt4 mt6-ns">
+            Katja möchte an der THB studieren, aber welches Studium ist das
+            richtige für sie? Ab wann und wie schreibt sie sich in ihren
+            Wunsch-Studiengang ein? In der Allgemeinen Studienberatung bekommt
+            sie kompetente Unterstützung und erhält alle Informationen zu einem
+            erfolgreichen Studieneinstieg an der THB.
+          </p>
+          <p class="lh-copy measure">
+            Du hast Fragen zu Studienmöglichkeiten, Zulassungsvoraussetzungen,
+            Studienfachwahl, Wohnen am Hochschulort, zur Studienfinanzierung
+            oder zum Studium allgemein? Dann nimm online an unserer offenen
+            Studienberatung teil oder buche einen Termin für eine persönliche
+            und vertrauliche Beratung. Wir freuen uns auf Dich.
+          </p>
+        </div>
+        <div class="fn fl-ns w-25-ns">
+          <img class="mascot" src="public/images/katja1.png" alt="" />
+        </div>
+      </article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-green section"
+        id="karriere"
+      ></article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 bg-white section"
+        id="international"
+      >
+        <header class="fn fl-ns w-50-ns pr4-ns">
+          <h1 class="mb0 mt5 lh-title">Zentrumseite mit Aktivitäten</h1>
+          <time class="f6 ttu tracked gray"
+            >Untertitel untertitel untertitel lorem ipsum dolor sit amet</time
+          >
+          <div class="overflow-auto overflow-x-hidden pad-07 mt4 max-vh-80">
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+            <article
+              class="center mw5 mw6-ns br3 shadow-3 hidden b--black-10 bg-white-30 mv4"
+            >
+              <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+                Malen nach Zahlen
+              </h1>
+              <div class="w-100 pa3 bt dt b--black-10">
+                <div class="w-20 dtc-l br">
+                  <p class="f6 f5-ns lh-copy measure">
+                    10:00 - 12:00 Uhr
+                  </p>
+                </div>
+                <div class="w-two-thirds dtc p-left-15">
+                  <p class="f6 f5-ns lh-copy measure">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="f4 bg-animate hover-bg-dark-red white dib w-100 th-red br3 br--bottom black-60 mv0 pv2 ph3 tc"
+              >
+                Teilnehmen
+              </a>
+            </article>
+          </div>
+        </header>
+        <div class="fn fl-ns w-25-ns">
+          <p class="lh-copy measure mt4 mt6-ns">
+            Katja möchte studieren, aber welches Studium ist das richtige für
+            sie? In der allgemeinen Studienberatung bekommt sie kompetente
+            Unterstützung und findet das Studium, das am besten zu ihr passt.
+          </p>
+          <p class="lh-copy measure">
+            Du hast Fragen zu Studienmöglichkeiten, Zulassungsvoraussetzungen,
+            Studienfachwahl, Unterbringung am Hochschulort, zur
+            Studienfinanzierung oder zum Studium allgemein? Dann nimm online an
+            unserer offenen Studienberatung teil oder buche einen Termin für
+            eine persönliche und vertrauliche Beratung. Wir freuen uns auf Dich.
+          </p>
+        </div>
+        <div class="fn fl-ns w-25-ns">
+          <img class="mascot" src="public/images/katja1.png" alt="" />
+        </div>
+      </article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-orange section"
+        id="dual"
+      ></article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-blue section"
+        id="gruenden"
+      ></article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-orange section"
+        id="anrechnung"
+      ></article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-black section"
+        id="studentenwerk"
+      ></article>
+      <article
+        class="cf ph3 ph5-ns mvh-85 w-100 th-green section"
+        id="berufsberatung"
+      ></article>
     </main>
     <script src="public/dist/mux.min.js"></script>
     <script src="public/dist/shaka-player.compiled.js"></script>
