@@ -1,29 +1,41 @@
+html,
 body {
-  max-width: 100vw;
+  position: relative;
+  height: 100%;
   overflow-x: hidden;
 }
-
 .th-red {
   background-color: #cc0a2f;
 }
+
+.th-red-text {
+  color: #cc0a2f;
+}
+
 .th-red-30 {
   background-color: rgba(204, 10, 46, 0.334);
 }
+
 .th-red-60 {
   background-color: rgba(204, 10, 46, 0.603);
 }
+
 .th-black {
   background-color: #000000;
 }
+
 .th-blue {
   background-color: #00bae5;
 }
+
 .th-green {
   background-color: #83bb20;
 }
+
 .th-orange {
   background-color: #f18400;
 }
+
 .mobile-menu-closed {
   display: none;
 }
@@ -32,10 +44,9 @@ body {
   display: block !important;
 }
 
-.menu {
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+#mobile-menu-toggle {
+  margin-right: 1em;
+  margin-top: 0.5%;
 }
 
 #lg-link {
@@ -53,9 +64,11 @@ body {
 .top-100 {
   top: 100%;
 }
+
 a {
   outline: 0 !important;
 }
+
 .vw-100 {
   width: 100vw;
 }
@@ -63,17 +76,37 @@ a {
 .custom-f2 {
   font-size: 1.8rem;
 }
+
+.mascot {
+  max-width: 30%;
+  float: right;
+}
+
+.mascot-lisa {
+  max-width: 45%;
+  float: right;
+}
+
+.mascot-jules {
+  max-width: 30%;
+  float: right;
+  margin-top: 5rem;
+}
+
+.mascot-lea {
+  max-width: 60%;
+  float: right;
+}
+
 @media screen and (min-width: 23em) {
   .custom-f2 {
     font-size: 2.1rem;
   }
 }
+
 @media screen and (min-width: 67em) {
   .custom-f-headline-l {
     font-size: 5rem;
-  }
-  .mascot {
-    margin-top: 15rem;
   }
   .overflow-x-hidden {
     overflow-x: hidden !important;
@@ -112,18 +145,6 @@ a {
   width: initial;
 }
 
-#bg-video-i,
-#bg-video-t,
-#bg-video-w {
-  position: absolute;
-  top: 100vh;
-  bottom: 0;
-  width: 100%;
-  height: 115%;
-  overflow: hidden;
-  z-index: -5;
-}
-
 #bg-video_html5_api,
 #bg-video_shaka_api,
 #bg-video_flash_api {
@@ -135,6 +156,13 @@ a {
   transform: translateX(calc((100% - 100vw) / 2));
 }
 
+#bg-video-i,
+#bg-video-t,
+#bg-video-w {
+  z-index: -1;
+  height: 0px;
+}
+
 #bg-video-w_html5_api,
 #bg-video-w_shaka_api,
 #bg-video-w_flash_api,
@@ -144,27 +172,18 @@ a {
 #bg-video-i_html5_api,
 #bg-video-i_shaka_api,
 #bg-video-i_flash_api {
-  /* Make video to at least 100% wide and tall */
-  min-width: 100%;
-  min-height: 100%;
-
-  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-  width: auto;
-  height: auto;
-
-  /* Center the video */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 130vh;
+  transform: translateX(calc((30% - 100vw) / 2));
 }
 
 #teaser {
   overflow: hidden;
 }
+
 .vjs-poster {
   background-size: cover !important;
 }
+
 .mvh-100 {
   min-height: 100vh;
 }
@@ -177,13 +196,19 @@ a {
   max-height: 67vh;
 }
 
+.max-vh-85 {
+  max-height: 79.5vh;
+}
+
 .tr-link {
   cursor: pointer;
   cursor: hand;
 }
+
 .fl-end {
   float: inline-end;
 }
+
 .vjs-text-track-display,
 .vjs-loading-spinner,
 .vjs-control-bar,
@@ -200,6 +225,7 @@ z-999 {
 .w-20 {
   width: 20%;
 }
+
 .w-80 {
   width: 100% !important;
 }
@@ -207,12 +233,15 @@ z-999 {
 .vh-74 {
   max-height: 72vh;
 }
+
 .p-left-15 {
   padding-left: 15px;
 }
+
 .opac-0 {
   opacity: 0;
 }
+
 /*Accordion -----------------------------------------------------*/
 #fachbereiche {
   box-sizing: border-box;
@@ -235,69 +264,61 @@ z-999 {
   flex: 1;
   align-items: stretch;
   overflow: hidden;
-
   cursor: pointer;
   transition: all 0.5s ease;
-
-  &:hover {
-    background: darken(rgba(0, 0, 0, 0.3), 3);
-  }
-
-  &.active {
-    flex: 5;
-    cursor: default;
-    overflow: hidden;
-
-    .section-title {
-      opacity: 0;
-      max-height: 0px;
-    }
-
-    .section-content {
-      flex: 4;
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }
-
-  .section-title {
-    flex: 1;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: white;
-
-    h2 {
-      margin: 0;
-      width: 100%;
-      padding: 25px;
-      position: relative;
-      top: 5em;
-      min-height: 7em;
-    }
-    h3 {
-      position: relative;
-      top: 50vh;
-      padding: 1em;
-      width: 80%;
-      left: 3vw;
-    }
-  }
-  #fb-content h3 {
-    width: 100%;
-    padding: 1em;
-  }
-
-  .section-content {
-    flex: 1;
-    display: block;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-  }
+}
+.accordion-li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.accordion-li.active {
+  flex: 5;
+  cursor: default;
+  overflow: hidden;
+}
+.accordion-li.active .section-title {
+  opacity: 0;
+  max-height: 0px;
+}
+.accordion-li.active .section-content {
+  flex: 4;
+  opacity: 1;
+  transform: scaleX(1);
+}
+.accordion-li .section-title {
+  flex: 1;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+.accordion-li .section-title h2 {
+  margin: 0;
+  width: 100%;
+  padding: 25px;
+  position: relative;
+  top: 5em;
+  min-height: 7em;
+}
+.accordion-li .section-title h3 {
+  position: relative;
+  top: 50vh;
+  padding: 1em;
+  width: 80%;
+  left: 3vw;
+}
+.accordion-li #fb-content h3 {
+  width: 100%;
+  padding: 1em;
+}
+.accordion-li .section-content {
+  flex: 1;
+  display: block;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -311,23 +332,17 @@ z-999 {
     max-width: 100vh;
     overflow: hidden;
   }
-
-  .accordion-li {
-    &:hover {
-      background: unset;
-    }
+  .accordion-li:hover {
+    background: unset;
   }
-
   .accordion-li .section-content {
     display: block;
     opacity: 1;
   }
-
   .section-title {
     opacity: 0;
     max-height: 0px;
   }
-
   .section-title h2 {
     width: 100%;
   }
@@ -340,6 +355,44 @@ z-999 {
   #bg-video-i {
     top: 106vh;
   }
+  #bg-video-w_html5_api,
+  #bg-video-w_shaka_api,
+  #bg-video-w_flash_api,
+  #bg-video-t_html5_api,
+  #bg-video-t_shaka_api,
+  #bg-video-t_flash_api,
+  #bg-video-i_html5_api,
+  #bg-video-i_shaka_api,
+  #bg-video-i_flash_api {
+    height: 100vh;
+    transform: translateX(-33%);
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 /*Accordion -----------------------------------------------------*/
+.circular {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.circular img {
+  min-width: 200%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.mw4-5 {
+  max-width: 12rem;
+}
+.mh-6 {
+  min-height: 6rem;
+}

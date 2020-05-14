@@ -1,7 +1,5 @@
 import '../styles/index.scss';
 import '../../node_modules/tachyons/css/tachyons.min.css';
-import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
-import '../../node_modules/@fortawesome/fontawesome-free/js/all.js';
 
 var player = videojs('bg-video', {
   autoplay: true,
@@ -20,6 +18,10 @@ player.src([
     type: 'video/mp4',
     src: 'public/video/video-bg/progressive.mp4',
   },
+  {
+    type: 'video/mp4',
+    src: 'public/video/video-bg.mp4',
+  },
 ]);
 
 var playerI = videojs('bg-video-i', {
@@ -33,11 +35,15 @@ var playerI = videojs('bg-video-i', {
 playerI.src([
   {
     type: 'application/x-mpegURL',
-    src: 'public/video/video-bg/index.m3u8',
+    src: 'public/video/informatik/video-bg/index.m3u8',
   },
   {
     type: 'video/mp4',
-    src: 'public/video/video-bg/progressive.mp4',
+    src: 'public/video/informatik/video-bg/progressive.mp4',
+  },
+  {
+    type: 'video/mp4',
+    src: 'public/video/informatik/video-bg.mp4',
   },
 ]);
 
@@ -52,11 +58,15 @@ var playerT = videojs('bg-video-t', {
 playerT.src([
   {
     type: 'application/x-mpegURL',
-    src: 'public/video/video-bg/index.m3u8',
+    src: 'public/video/technik/video-bg/index.m3u8',
   },
   {
     type: 'video/mp4',
-    src: 'public/video/video-bg/progressive.mp4',
+    src: 'public/video/technik/video-bg/progressive.mp4',
+  },
+  {
+    type: 'video/mp4',
+    src: 'public/video/technik/video-bg.mp4',
   },
 ]);
 
@@ -71,11 +81,15 @@ var playerW = videojs('bg-video-w', {
 playerW.src([
   {
     type: 'application/x-mpegURL',
-    src: 'public/video/video-bg/index.m3u8',
+    src: 'public/video/wirtschaft/video-bg/index.m3u8',
   },
   {
     type: 'video/mp4',
-    src: 'public/video/video-bg/progressive.mp4',
+    src: 'public/video/wirtschaft/video-bg/progressive.mp4',
+  },
+  {
+    type: 'video/mp4',
+    src: 'public/video/wirtschaft/video-bg.mp4',
   },
 ]);
 
@@ -84,6 +98,12 @@ function initMobileMenu(toggle, menu) {
   ['click', 'touchstart'].forEach(function (eventName) {
     toggle.addEventListener(eventName, function (evt) {
       evt.preventDefault();
+      menu.classList.toggle('mobile-menu-open');
+      menu.classList.toggle('mobile-menu-closed');
+    });
+    menu.addEventListener(eventName, function (evt) {
+      evt.preventDefault();
+      window.open(evt.target.hash, '_self');
       menu.classList.toggle('mobile-menu-open');
       menu.classList.toggle('mobile-menu-closed');
     });
@@ -97,16 +117,16 @@ initMobileMenu(toggle, menu);
 (function () {
   'use strict';
 
-  var section = document.querySelectorAll('.section');
+  var section = document.querySelectorAll('.section--tile');
   var sections = {};
   var i = 0;
 
   Array.prototype.forEach.call(section, function (e) {
-    sections[e.id] = e.offsetTop - 67;
+    sections[e.id] = e.offsetTop - 77;
   });
 
-  sections.berufsberatung -= 160;
-  window.onscroll = function () {
+  sections.anrechnung -= 160;
+  document.body.addEventListener('scroll', () => {
     var scrollPosition =
       document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -133,7 +153,7 @@ initMobileMenu(toggle, menu);
     } else {
       player.pause();
     }
-    if (scrollPosition <= sections.studienberatung) {
+    if (scrollPosition <= sections.dsfklkiwuyhjw) {
       playerW.play();
       playerI.play();
       playerT.play();
@@ -142,7 +162,7 @@ initMobileMenu(toggle, menu);
       playerI.pause();
       playerT.pause();
     }
-  };
+  });
 })(playerW, playerI, playerT, player);
 
 var s = document.createElement('script');
